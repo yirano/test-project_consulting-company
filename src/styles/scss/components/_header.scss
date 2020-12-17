@@ -1,3 +1,26 @@
 .header {
-	border: 1px solid blue;
+	position: relative;
+	width: 100%;
+	height: 908px;
+	background: linear-gradient(0deg, $grayish-blue, rgba(18, 37, 52, 0.16)),
+		url('../../Assets/images/man-consulting.jpeg');
+	background-size: cover;
+	color: $white;
+	a {
+		color: $white;
+		padding-right: 2.3rem;
+	}
+	.subMenu {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		bottom: 0;
+		height: 74px;
+		width: 100%;
+		background: rgba(21, 57, 94, 0.7);
+
+		& > * {
+			padding-left: 3rem;
+		}
+	}
 }
