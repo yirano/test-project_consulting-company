@@ -132,7 +132,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+img {
+  width: 100%; }
+
 .app {
+  max-width: 1440px;
+  margin: auto;
   border: 1px solid red; }
 
 .header {
