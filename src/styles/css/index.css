@@ -185,23 +185,23 @@ img {
     background: rgba(21, 44, 68, 0.68);
     width: 100%;
     transition: padding 200ms linear; }
-    .header .nav .responsiveMenu {
+    .header .nav .logoMenuIcon {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      width: 37%; }
-      .header .nav .responsiveMenu .logo {
+      width: 100%; }
+      .header .nav .logoMenuIcon .logo {
         border: 1px solid blue;
         display: flex;
         align-items: center; }
-        .header .nav .responsiveMenu .logo .companyName {
+        .header .nav .logoMenuIcon .logo .companyName {
           margin-left: 0.3rem;
           padding: 1rem;
           letter-spacing: 0.07rem;
           font-weight: 300;
           line-height: 1.4rem; }
-          .header .nav .responsiveMenu .logo .companyName p {
+          .header .nav .logoMenuIcon .logo .companyName p {
             text-transform: uppercase;
             font-size: 0.8rem;
             letter-spacing: 0.16rem; }
@@ -236,14 +236,16 @@ img {
       .header .nav .menu.hideMenu {
         overflow: hidden;
         height: 0px;
-        transition: all 1200ms ease-in; }
+        transition: height 1200ms ease-in; }
     @media screen and (min-width: 999px) {
       .header .nav {
         background: transparent;
         flex-direction: row;
         padding: 3.6rem 6rem; }
-        .header .nav .menuIcon {
-          display: none; }
+        .header .nav .logoMenuIcon {
+          width: 37%; }
+          .header .nav .logoMenuIcon .menuIcon {
+            display: none; }
         .header .nav .menu {
           flex-direction: row; }
           .header .nav .menu .menuLinks {

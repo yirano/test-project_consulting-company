@@ -19,7 +19,7 @@ const Nav = () => {
 
     return (
         <div className="nav">
-            <div className="responsiveMenu">
+            <div className="logoMenuIcon">
                 <div className="logo">
                     <FontAwesomeIcon icon={faPiedPiperSquare} size="4x" />
                     <div className="companyName">
@@ -30,7 +30,7 @@ const Nav = () => {
                 <div className="menuIcon" onClick={() => setShowMenu(!showMenu)}>Menu</div>
             </div>
 
-            <div className={showMenu ? "menu" : "menu hideMenu"}>
+            <div className={showMenu ? "menu " : "menu hideMenu"}>
                 <div className="menuLinks">
                     <a href="#">Expertise</a>
                     <a href="#">Events</a>

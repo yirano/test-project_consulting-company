@@ -29,12 +29,12 @@
 		width: 100%;
 		transition: padding 200ms linear;
 
-		.responsiveMenu {
+		.logoMenuIcon {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-			width: 37%;
+			width: 100%;
 
 			.logo {
 				border: 1px solid blue;
@@ -91,16 +91,18 @@
 			&.hideMenu {
 				overflow: hidden;
 				height: 0px;
-				transition: all 1200ms ease-in;
+				transition: height 1200ms ease-in;
 			}
 		}
 		@media screen and (min-width: 999px) {
 			background: transparent;
 			flex-direction: row;
 			padding: 3.6rem 6rem;
-
-			.menuIcon {
-				display: none;
+			.logoMenuIcon {
+				width: 37%;
+				.menuIcon {
+					display: none;
+				}
 			}
 			.menu {
 				flex-direction: row;
