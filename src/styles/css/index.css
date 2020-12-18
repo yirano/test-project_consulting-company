@@ -4,7 +4,8 @@
 */
 *,
 html,
-body {
+body,
+div {
   box-sizing: border-box; }
 
 html,
@@ -132,23 +133,139 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: 'defaultFont';
+  src: url("https://fonts.googleapis.com/css?family=Open+Sans:300, 300italic, 400, 400italic, 700"); }
+
+html {
+  font-family: 'defaultFont', sans-serif; }
+
+h1 {
+  font-size: 2.7rem; }
+
+h2 {
+  font-size: 2.3rem; }
+
+h4 {
+  font-size: 1.4rem; }
+
+body {
+  font-size: 16px; }
+
 img {
   width: 100%; }
 
 .app {
   max-width: 1440px;
-  margin: auto; }
+  margin: auto;
+  position: relative; }
 
 .header {
-  position: relative;
+  position: absolute;
+  top: 0;
   width: 100%;
-  height: 908px;
+  max-height: 908px;
+  height: 100vh;
   background: linear-gradient(0deg, rgba(21, 44, 68, 0.68), rgba(18, 37, 52, 0.16)), url("../../Assets/images/man-consulting.jpeg");
   background-size: cover;
   color: #fff; }
+  .header > * {
+    padding: 0.6rem 6rem; }
   .header a {
     color: #fff;
-    padding-right: 2.3rem; }
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.06rem; }
+  .header .nav {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(21, 44, 68, 0.68);
+    width: 100%;
+    transition: padding 200ms linear; }
+    .header .nav .responsiveMenu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 37%; }
+      .header .nav .responsiveMenu .logo {
+        border: 1px solid blue;
+        display: flex;
+        align-items: center; }
+        .header .nav .responsiveMenu .logo .companyName {
+          margin-left: 0.3rem;
+          padding: 1rem;
+          letter-spacing: 0.07rem;
+          font-weight: 300;
+          line-height: 1.4rem; }
+          .header .nav .responsiveMenu .logo .companyName p {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.16rem; }
+    .header .nav .menu {
+      border: 1px solid red;
+      display: flex;
+      flex-grow: 2;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      transition: height 1200ms ease-in; }
+      .header .nav .menu .menuLinks {
+        display: flex;
+        flex-direction: column;
+        margin: 1.6rem; }
+        .header .nav .menu .menuLinks a {
+          text-transform: uppercase;
+          text-decoration: none; }
+      .header .nav .menu .menuActions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .header .nav .menu .menuActions button {
+          background: #fff;
+          border: none;
+          border-radius: 4px;
+          padding: 0.7rem 3rem; }
+        .header .nav .menu .menuActions .search {
+          margin: 1.3rem; }
+      .header .nav .menu.hideMenu {
+        overflow: hidden;
+        height: 0px;
+        transition: all 1200ms ease-in; }
+    @media screen and (min-width: 999px) {
+      .header .nav {
+        background: transparent;
+        flex-direction: row;
+        padding: 3.6rem 6rem; }
+        .header .nav .menuIcon {
+          display: none; }
+        .header .nav .menu {
+          flex-direction: row; }
+          .header .nav .menu .menuLinks {
+            flex-direction: row; }
+          .header .nav .menu .menuActions {
+            flex-direction: row; }
+            .header .nav .menu .menuActions button {
+              height: 3rem; } }
+  .header .cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%; }
+    .header .cta .ctaLinks {
+      display: flex;
+      flex-direction: column; }
+      .header .cta .ctaLinks button {
+        width: fit-content;
+        border: 2px solid blue;
+        border-radius: 4px;
+        padding: 0.8rem 3rem; }
   .header .subMenu {
     position: absolute;
     display: flex;
