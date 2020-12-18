@@ -1,5 +1,5 @@
 import React from "react"
-import MainContent from "./MainContent"
+import MainContent from "./MainContent/MainContent"
 import Footer from "./Footer"
 import Header from "./Header/Header"
 

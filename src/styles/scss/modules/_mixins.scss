@@ -1,4 +1,4 @@
-@mixin buttons($width, $height, $text, $background) {
+@mixin buttons($width: 9, $height:3, $text:$white, $background: $blue) {
 	width: $width+rem;
 	height: $height+rem;
 	color: $text;
@@ -6,7 +6,7 @@
 	cursor: pointer;
 }
 
-@mixin borders($border: solid, $pixel:0, $radius: 7, $color: transparent) {
+@mixin borders($border: solid, $pixel:0, $radius: 4, $color: transparent) {
 	border: $color $border $pixel;
 	border-radius: $radius+px;
 }

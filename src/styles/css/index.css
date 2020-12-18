@@ -147,7 +147,8 @@ h2 {
   font-size: 2.3rem; }
 
 h4 {
-  font-size: 1.4rem; }
+  font-size: 1.6rem;
+  letter-spacing: 0.03rem; }
 
 body {
   font-size: 16px; }
@@ -173,7 +174,7 @@ img {
   position: relative; }
 
 .header {
-  position: absolute;
+  position: relative;
   top: 0;
   width: 100%;
   max-height: 908px;
@@ -253,7 +254,7 @@ img {
         margin: 3.3rem 6rem;
         animation: none;
         border-bottom: 1px solid #fff;
-        width: fill-available;
+        width: stretch;
         width: -webkit-fill-available; }
         .header .nav .logoMenuIcon {
           width: 25%;
@@ -298,7 +299,7 @@ img {
         background: blue;
         cursor: pointer;
         border: cyan solid 2px;
-        border-radius: 7px; }
+        border-radius: 4px; }
     @media screen and (min-width: 999px) {
       .header .cta {
         height: 95%;
@@ -319,3 +320,59 @@ img {
     background: rgba(21, 57, 94, 0.7); }
     .header .subMenu > * {
       padding-left: 3rem; }
+
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  flex-direction: column;
+  background: #1793d420;
+  justify-content: space-around;
+  align-items: center;
+  padding: 6rem 3rem; }
+  .mainContent .card {
+    position: relative;
+    display: flex;
+    width: 80%;
+    height: 36.6rem;
+    height: auto;
+    max-height: auto;
+    padding: 1.6rem;
+    margin: 1rem;
+    background: #fff;
+    flex-direction: column;
+    align-items: center; }
+    .mainContent .card .cardImage {
+      height: 13rem;
+      overflow: hidden; }
+    .mainContent .card .cardDesc {
+      padding: 1.6rem;
+      height: 59%; }
+      .mainContent .card .cardDesc h4 {
+        color: #1793d4;
+        text-transform: uppercase;
+        font-weight: 300;
+        padding-bottom: 1.7rem; }
+        .mainContent .card .cardDesc h4 span {
+          font-weight: 700; }
+      .mainContent .card .cardDesc p {
+        font-size: 0.9rem;
+        line-height: 1.4rem; }
+    .mainContent .card .cardButton {
+      position: absolute;
+      bottom: -1.25rem; }
+      .mainContent .card .cardButton button {
+        width: 9rem;
+        height: 3.2rem;
+        color: #fff;
+        background: #fca656;
+        cursor: pointer;
+        border: transparent none 0;
+        border-radius: 4px; }
+  @media screen and (min-width: 799px) {
+    .mainContent {
+      flex-direction: row; }
+      .mainContent .card {
+        width: 29%;
+        min-width: 14rem;
+        margin: 0rem; } }

@@ -1,0 +1,64 @@
+.mainContent {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	flex-direction: column;
+	// max-height: 900px;
+	background: $light-blue;
+	justify-content: space-around;
+	align-items: center;
+	padding: 6rem 3rem;
+	.card {
+		position: relative;
+		display: flex;
+		width: 80%;
+		height: 36.6rem;
+
+		height: auto;
+		max-height: auto;
+
+		padding: 1.6rem;
+		margin: 1rem;
+		background: #fff;
+		flex-direction: column;
+		align-items: center;
+		.cardImage {
+			height: 13rem;
+			overflow: hidden;
+		}
+		.cardDesc {
+			padding: 1.6rem;
+			height: 59%;
+			h4 {
+				color: $blue;
+				text-transform: uppercase;
+				font-weight: 300;
+				padding-bottom: 1.7rem;
+				span {
+					font-weight: 700;
+				}
+			}
+			p {
+				font-size: 0.9rem;
+				line-height: 1.4rem;
+			}
+		}
+		.cardButton {
+			position: absolute;
+			bottom: -1.25rem;
+			button {
+				@include buttons($background: $orange, $height: 3.2);
+				@include borders($border: none);
+			}
+		}
+	}
+
+	@media screen and (min-width: 799px) {
+		flex-direction: row;
+		.card {
+			width: 29%;
+			min-width: 14rem;
+			margin: 0rem;
+		}
+	}
+}
