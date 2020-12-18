@@ -11,9 +11,12 @@ const Nav = () => {
             setShowMenu(true)
         }
     }, [])
+
     window.addEventListener('resize', () => {
         if (window.innerWidth > 999 || document.documentElement.width > 999) {
             setShowMenu(true)
+        } else {
+            setShowMenu(false)
         }
     })
 

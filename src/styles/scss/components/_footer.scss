@@ -1,0 +1,56 @@
+footer {
+	text-align: center;
+
+	.contact {
+		display: flex;
+		flex-direction: column;
+		background: $yellow;
+		> * {
+			padding: 1rem 3rem;
+		}
+		.phoneEmail {
+			background: $blue;
+			color: $white;
+			line-height: 1.8rem;
+
+			a {
+				color: $white;
+			}
+		}
+		.addressSocial {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			line-height: 1.4rem;
+			a {
+				color: $black;
+			}
+		}
+		.socialMedia {
+			img {
+				margin: 0 0.6rem;
+				width: 2rem;
+			}
+		}
+	}
+	.copyright {
+		display: flex;
+		flex-direction: column;
+		background: $blue;
+		color: $white;
+		font-size: 0.7rem;
+		padding: 2rem;
+		line-height: 1.3rem;
+		a {
+			color: $white;
+		}
+	}
+	@media screen and (min-width: 799px) {
+		.contact {
+			flex-direction: row;
+		}
+		.copyright {
+			flex-direction: row;
+		}
+	}
+}

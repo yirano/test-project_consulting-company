@@ -1,9 +1,12 @@
 import React from 'react'
+import Contact from "./Contact"
+import Copyright from "./Copyright"
 
 const Footer = () => {
     return (
         <footer>
-            <h1>Footer</h1>
+            <Contact />
+            <Copyright />
         </footer>
     )
 }
