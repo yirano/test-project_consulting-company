@@ -181,6 +181,12 @@ img {
   background: linear-gradient(0deg, rgba(21, 44, 68, 0.68), rgba(18, 37, 52, 0.16)), url("../../Assets/images/man-consulting.jpeg");
   background-size: cover;
   color: #fff; }
+  .header a {
+    color: #fff;
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.06rem; }
   .header .nav {
     display: flex;
     position: absolute;
@@ -224,12 +230,7 @@ img {
         margin: 1.6rem; }
         .header .nav .menu .menuLinks a {
           text-transform: uppercase;
-          text-decoration: none;
-          color: #fff;
-          padding: 1rem;
-          font-size: 0.9rem;
-          font-weight: 300;
-          letter-spacing: 0.06rem; }
+          text-decoration: none; }
       .header .nav .menu .menuActions {
         display: flex;
         flex-direction: column;
@@ -274,15 +275,40 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    line-height: 3.2rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem; }
+    .header .cta h1 {
+      text-transform: uppercase; }
+      .header .cta h1:last-child {
+        font-weight: 700; }
     .header .cta .ctaLinks {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      align-items: center;
+      margin: 2rem; }
       .header .cta .ctaLinks button {
-        width: fit-content;
-        border-radius: 4px;
-        padding: 0.8rem 3rem; }
+        width: 12rem;
+        height: 3rem;
+        color: #fff;
+        background: blue;
+        cursor: pointer;
+        border: cyan solid 2px;
+        border-radius: 7px; }
+    @media screen and (min-width: 999px) {
+      .header .cta {
+        height: 95%;
+        text-align: left;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 10% 10rem 0; }
+        .header .cta .ctaLinks {
+          flex-direction: row;
+          margin: 2rem 0; } }
   .header .subMenu {
     position: absolute;
     display: flex;
