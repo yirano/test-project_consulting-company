@@ -1,0 +1,321 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*,
+html,
+body,
+div {
+  box-sizing: border-box; }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'defaultFont';
+  src: url("https://fonts.googleapis.com/css?family=Open+Sans:300, 300italic, 400, 400italic, 700"); }
+
+html {
+  font-family: 'defaultFont', sans-serif; }
+
+h1 {
+  font-size: 2.7rem; }
+
+h2 {
+  font-size: 2.3rem; }
+
+h4 {
+  font-size: 1.4rem; }
+
+body {
+  font-size: 16px; }
+
+img {
+  width: 100%; }
+
+@keyframes showMenu {
+  0% {
+    height: 0px; }
+  100% {
+    height: 25rem; } }
+
+@keyframes hideMenu {
+  0% {
+    height: 25rem; }
+  100% {
+    height: 0px; } }
+
+.app {
+  max-width: 1440px;
+  margin: auto;
+  position: relative; }
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-height: 908px;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(21, 44, 68, 0.68), rgba(18, 37, 52, 0.16)), url("../../Assets/images/man-consulting.jpeg");
+  background-size: cover;
+  color: #fff; }
+  .header a {
+    color: #fff;
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.06rem; }
+  .header .nav {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(21, 44, 68, 0.68);
+    transition: padding 200ms linear;
+    width: 100%; }
+    .header .nav .logoMenuIcon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 3rem; }
+      .header .nav .logoMenuIcon .logo {
+        display: flex;
+        align-items: center; }
+        .header .nav .logoMenuIcon .logo .companyName {
+          margin-left: 0.3rem;
+          padding: 1rem;
+          letter-spacing: 0.07rem;
+          font-weight: 300;
+          line-height: 1.4rem; }
+          .header .nav .logoMenuIcon .logo .companyName p {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.16rem; }
+    .header .nav .menu {
+      display: flex;
+      flex-grow: 2;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      animation: showMenu 300ms forwards;
+      overflow: hidden; }
+      .header .nav .menu .menuLinks {
+        display: flex;
+        flex-direction: column;
+        margin: 1.6rem; }
+        .header .nav .menu .menuLinks a {
+          text-transform: uppercase;
+          text-decoration: none; }
+      .header .nav .menu .menuActions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .header .nav .menu .menuActions button {
+          background: #fff;
+          border: none;
+          border-radius: 4px;
+          padding: 0.7rem 3rem; }
+        .header .nav .menu .menuActions .search {
+          margin: 1.3rem; }
+      .header .nav .menu.hideMenu {
+        overflow: hidden;
+        animation: hideMenu 300ms forwards; }
+    @media screen and (min-width: 999px) {
+      .header .nav {
+        background: transparent;
+        flex-direction: row;
+        margin: 3.3rem 6rem;
+        animation: none;
+        border-bottom: 1px solid #fff;
+        width: fill-available;
+        width: -webkit-fill-available; }
+        .header .nav .logoMenuIcon {
+          width: 25%;
+          padding: 0; }
+          .header .nav .logoMenuIcon .menuIcon {
+            display: none; }
+        .header .nav .menu {
+          flex-direction: row;
+          animation: none 300ms linear; }
+          .header .nav .menu .menuLinks {
+            flex-direction: row; }
+            .header .nav .menu .menuLinks li {
+              padding: 1rem; }
+          .header .nav .menu .menuActions {
+            flex-direction: row; }
+            .header .nav .menu .menuActions button {
+              height: 3rem; } }
+  .header .cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    line-height: 3.2rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem; }
+    .header .cta h1 {
+      text-transform: uppercase; }
+      .header .cta h1:last-child {
+        font-weight: 700; }
+    .header .cta .ctaLinks {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2rem; }
+      .header .cta .ctaLinks button {
+        width: 12rem;
+        height: 3rem;
+        color: #fff;
+        background: blue;
+        cursor: pointer;
+        border: cyan solid 2px;
+        border-radius: 7px; }
+    @media screen and (min-width: 999px) {
+      .header .cta {
+        height: 95%;
+        text-align: left;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 10% 10rem 0; }
+        .header .cta .ctaLinks {
+          flex-direction: row;
+          margin: 2rem 0; } }
+  .header .subMenu {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    height: 74px;
+    width: 100%;
+    background: rgba(21, 57, 94, 0.7); }
+    .header .subMenu > * {
+      padding-left: 3rem; }
