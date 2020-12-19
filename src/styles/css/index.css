@@ -351,24 +351,41 @@ img {
     justify-content: center;
     align-items: center;
     bottom: 0;
-    height: 74px;
     width: 100%;
+    padding: 1rem 0;
     background: rgba(21, 57, 94, 0.7);
-    line-height: 1.3rem; }
+    line-height: 1.3rem;
+    padding-left: 0; }
     @media (min-width: 768px) {
       .header .subMenu {
-        padding-left: 8.6rem;
+        height: 74px;
         flex-direction: row;
         justify-content: flex-start; } }
+    @media (min-width: 992px) {
+      .header .subMenu {
+        padding-left: 9.55%; } }
     .header .subMenu .subMenuPrompt {
       display: flex;
       align-items: center;
-      margin-left: -5rem; }
-      .header .subMenu .subMenuPrompt > * {
-        margin-left: 1.7rem; }
+      flex-direction: column; }
       @media (min-width: 768px) {
         .header .subMenu .subMenuPrompt {
-          margin-left: 0; } }
+          flex-direction: row;
+          margin-left: 0; }
+          .header .subMenu .subMenuPrompt > * {
+            margin-left: 1.7rem; } }
+    .header .subMenu .subMenuLinks {
+      display: flex;
+      text-align: center; }
+      .header .subMenu .subMenuLinks a {
+        padding: 0.1;
+        font-size: 0.7rem; }
+      @media (min-width: 768px) {
+        .header .subMenu .subMenuLinks {
+          flex-direction: row; }
+          .header .subMenu .subMenuLinks a {
+            padding: 1rem;
+            font-size: 0.9rem; } }
 
 .mainContent {
   display: flex;
