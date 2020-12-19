@@ -140,9 +140,6 @@
 		line-height: 4.4rem;
 		font-weight: 300;
 		letter-spacing: 0.2rem;
-		h1 {
-			font-size: 4vh;
-		}
 
 		@media screen and (min-width: 999px) {
 			height: 95%;
@@ -150,17 +147,20 @@
 			align-items: flex-start;
 			justify-content: center;
 			padding: 10% 10rem 0;
-			h1 {
-			}
 		}
 		.ctaMessage {
 			padding: 1rem 0;
-			margin-top: -22px;
+			margin-top: -6rem;
 			h1 {
 				text-transform: uppercase;
+				font-size: 4vh;
 				&:last-child {
 					font-weight: 700;
 				}
+			}
+
+			@media screen and (min-width: 768px) {
+				margin-top: 0;
 			}
 		}
 		.ctaLinks {
