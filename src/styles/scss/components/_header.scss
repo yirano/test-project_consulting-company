@@ -12,19 +12,20 @@
 	a {
 		color: $white;
 		padding: 1rem;
-		font-size: 0.9rem;
+		font-size: 0.8rem;
 		font-weight: 300;
 		letter-spacing: 0.06rem;
 	}
 
 	.nav {
 		display: flex;
-		position: absolute;
+		position: fixed;
 		flex-direction: column;
 		align-items: center;
 		background: $grayish-blue;
-		transition: padding 200ms linear;
 		width: 100%;
+		transition: padding 200ms linear;
+		z-index: 999;
 		.logoMenuIcon {
 			display: flex;
 			flex-direction: row;
@@ -49,6 +50,7 @@
 				}
 			}
 		}
+
 		.menu {
 			display: flex;
 			flex-grow: 2;
@@ -72,8 +74,9 @@
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
+				padding-left: 2rem;
 				button {
-					@include buttons($width: 10.2, $height: 2.5, $background: $white, $color: $blue);
+					@include buttons($width: 9.9, $height: 2.5, $background: $white, $color: $blue);
 					&:hover {
 						@include hover($blue, $white);
 					}
@@ -90,6 +93,7 @@
 		}
 
 		@media screen and (min-width: 999px) {
+			position: absolute;
 			background: transparent;
 			flex-direction: row;
 			padding: 2.7rem 6rem 1.1rem;
@@ -127,34 +131,46 @@
 		text-align: center;
 		height: 100%;
 		width: 100%;
-		line-height: 4.2rem;
+		line-height: 4.4rem;
 		font-weight: 300;
 		letter-spacing: 0.2rem;
-		h1 {
-			text-transform: uppercase;
-			&:last-child {
-				font-weight: 700;
-			}
-		}
-		.ctaLinks {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin: 2rem;
-			button {
-				@include buttons(13.7, 3.7, $white, $blue);
-				@include borders($pixel: 3px, $color: $bright-blue);
-			}
-		}
 		@media screen and (min-width: 999px) {
 			height: 95%;
 			text-align: left;
 			align-items: flex-start;
 			justify-content: center;
 			padding: 10% 10rem 0;
-			.ctaLinks {
+		}
+		.ctaMessage {
+			padding: 1rem 0;
+			margin-top: -22px;
+			h1 {
+				text-transform: uppercase;
+				&:last-child {
+					font-weight: 700;
+				}
+			}
+		}
+		.ctaLinks {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			letter-spacing: 0.02rem;
+			font-size: 0.85rem;
+			@media screen and (min-width: 999px) {
 				flex-direction: row;
 				margin: 2rem 0;
+			}
+			a {
+				padding: 0;
+			}
+			button {
+				margin-right: 2rem;
+				@include buttons(13.7, 3.7, $white, $blue);
+				@include borders($pixel: 3, $color: $bright-blue);
+				&:hover {
+					@include hover($white, $blue);
+				}
 			}
 		}
 	}
@@ -162,14 +178,29 @@
 	.subMenu {
 		position: absolute;
 		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		align-items: center;
 		bottom: 0;
 		height: 74px;
 		width: 100%;
 		background: rgba(21, 57, 94, 0.7);
-
-		& > * {
-			padding-left: 3rem;
+		line-height: 1.3rem;
+		@media (min-width: 768px) {
+			padding-left: 8.6rem;
+			flex-direction: row;
+			justify-content: flex-start;
+		}
+		.subMenuPrompt {
+			display: flex;
+			align-items: center;
+			margin-left: -5rem;
+			> * {
+				margin-left: 1.7rem;
+			}
+			@media (min-width: 768px) {
+				margin-left: 0;
+			}
 		}
 	}
 }

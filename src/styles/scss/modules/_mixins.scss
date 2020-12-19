@@ -10,10 +10,14 @@
 	border-radius: 4px;
 	border: 2px solid transparent;
 	cursor: pointer;
+	&:active,
+	&:focus {
+		outline: none;
+	}
 }
 
 @mixin borders($border: solid, $pixel:0, $radius: 4, $color: transparent) {
-	border: $color $border $pixel;
+	border: $color $border $pixel+px;
 	border-radius: $radius+px;
 }
 
