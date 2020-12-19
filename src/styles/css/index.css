@@ -269,7 +269,8 @@ img {
         position: absolute;
         background: transparent;
         flex-direction: row;
-        padding: 2.7rem 6rem 1.1rem;
+        padding: 2.7rem 0rem 1.1rem;
+        margin: 0 6rem;
         animation: none;
         border-bottom: 1px solid #fff;
         width: stretch; }

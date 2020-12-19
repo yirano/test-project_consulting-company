@@ -20,9 +20,9 @@ const Nav = () => {
         }
     })
 
-    return (
-        <div className="nav">
-            <div className="logoMenuIcon">
+    const Logo = () => {
+        return (
+            <a href="#" className="logo">
                 <div className="logo">
                     <FontAwesomeIcon icon={faPiedPiperSquare} size="4x" />
                     <div className="companyName">
@@ -30,6 +30,14 @@ const Nav = () => {
                         <p>Consulting Group</p>
                     </div>
                 </div>
+            </a>
+        )
+    }
+
+    return (
+        <div className="nav">
+            <div className="logoMenuIcon">
+                <Logo />
                 <div className="menuIcon" onClick={() => setShowMenu(!showMenu)}>Menu</div>
             </div>
 
