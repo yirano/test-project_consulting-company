@@ -339,14 +339,12 @@ img {
   background: #1793d420;
   justify-content: space-around;
   align-items: center;
-  padding: 6rem 3rem; }
+  padding: 6rem 5.5rem; }
   .mainContent .card {
     position: relative;
     display: flex;
     width: 80%;
-    height: 36.6rem;
     height: auto;
-    max-height: auto;
     padding: 1.6rem;
     margin: 1rem;
     background: #fff;
@@ -394,7 +392,7 @@ footer {
     flex-direction: column;
     background: #f3eee5; }
     footer .contact > div {
-      padding: 3.6rem 0 2rem 3.6rem; }
+      padding: 3.6rem 2rem; }
     footer .contact .phoneEmail {
       background: #1793d4;
       color: #fff;
@@ -407,7 +405,8 @@ footer {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      line-height: 1.9rem; }
+      line-height: 1.9rem;
+      padding-right: 0; }
       footer .contact .addressSocial a {
         color: #000; }
       footer .contact .addressSocial address {
@@ -450,17 +449,41 @@ footer {
         footer .contact .addressSocial address div {
           display: flex;
           flex-direction: column; }
+        footer .contact .addressSocial address h4 {
+          font-size: 2vw; }
       footer .contact .spacer {
         display: block;
         width: 40%;
         min-width: 31rem; }
     footer .copyright {
-      flex-direction: row; } }
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center; }
+      footer .copyright p {
+        font-size: 0.7rem;
+        font-weight: 300;
+        letter-spacing: 0.045rem; }
+        footer .copyright p:not(:last-child) {
+          content: ''; }
+          footer .copyright p:not(:last-child)::after {
+            content: '';
+            display: inline;
+            padding: 0 0.7rem; } }
+  @media screen and (min-width: 999px) {
+    footer .copyright {
+      flex-direction: row; }
+      footer .copyright p:not(:last-child) {
+        content: ''; }
+        footer .copyright p:not(:last-child)::after {
+          content: '|';
+          display: inline;
+          padding: 0 0.7rem; } }
   @media screen and (min-width: 1199px) {
     footer .contact .addressSocial {
       flex-direction: row; }
       footer .contact .addressSocial address div {
         display: flex;
         flex-direction: row; }
-      footer .contact .addressSocial h4 {
-        font-size: 2vw; } }
+      footer .contact .addressSocial address h4 {
+        font-size: 1.5rem; } }
