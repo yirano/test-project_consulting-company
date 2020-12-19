@@ -269,8 +269,7 @@ img {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        padding-left: 2rem; }
+        align-items: center; }
         .header .nav .menu .menuActions button {
           width: 9.9rem;
           height: 2.5rem;
@@ -288,6 +287,9 @@ img {
           .header .nav .menu .menuActions button:hover {
             background: #1793d4;
             color: #fff; }
+        @media screen and (min-width: 768px) {
+          .header .nav .menu .menuActions {
+            padding-left: 2rem; } }
         @media screen and (min-width: 999px) {
           .header .nav .menu .menuActions {
             flex-direction: row; } }

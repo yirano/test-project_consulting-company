@@ -106,12 +106,14 @@
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				padding-left: 2rem;
 				button {
 					@include buttons($width: 9.9, $height: 2.5, $background: $white, $color: $blue);
 					&:hover {
 						@include hover($blue, $white);
 					}
+				}
+				@media screen and (min-width: 768px) {
+					padding-left: 2rem;
 				}
 				@media screen and (min-width: 999px) {
 					flex-direction: row;
