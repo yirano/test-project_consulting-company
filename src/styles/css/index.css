@@ -298,6 +298,7 @@ img {
         animation: hideMenu 300ms forwards; }
   .header .cta {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -307,6 +308,8 @@ img {
     line-height: 4.4rem;
     font-weight: 300;
     letter-spacing: 0.2rem; }
+    .header .cta h1 {
+      font-size: 4vh; }
     @media screen and (min-width: 999px) {
       .header .cta {
         height: 95%;
