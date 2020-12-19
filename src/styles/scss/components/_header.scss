@@ -162,7 +162,7 @@
 			}
 
 			@media screen and (min-width: 768px) {
-				margin-top: 0;
+				margin-top: -22px;
 			}
 		}
 		.ctaLinks {
@@ -179,11 +179,13 @@
 				padding: 0;
 			}
 			button {
-				margin-right: 2rem;
 				@include buttons(13.7, 3.7, $white, $blue);
 				@include borders($pixel: 3, $color: $bright-blue);
 				&:hover {
 					@include hover($white, $blue);
+				}
+				@media screen and (min-width: 768px) {
+					margin-right: 2rem;
 				}
 			}
 		}

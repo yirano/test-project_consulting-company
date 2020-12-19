@@ -327,7 +327,7 @@ img {
           font-weight: 700; }
       @media screen and (min-width: 768px) {
         .header .cta .ctaMessage {
-          margin-top: 0; } }
+          margin-top: -22px; } }
     .header .cta .ctaLinks {
       display: flex;
       flex-direction: column;
@@ -341,7 +341,6 @@ img {
       .header .cta .ctaLinks a {
         padding: 0; }
       .header .cta .ctaLinks button {
-        margin-right: 2rem;
         width: 13.7rem;
         height: 3.7rem;
         color: #fff;
@@ -360,6 +359,9 @@ img {
         .header .cta .ctaLinks button:hover {
           background: #fff;
           color: #1793d4; }
+        @media screen and (min-width: 768px) {
+          .header .cta .ctaLinks button {
+            margin-right: 2rem; } }
   .header .subMenu {
     position: absolute;
     display: flex;
