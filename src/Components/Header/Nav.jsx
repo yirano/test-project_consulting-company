@@ -22,7 +22,7 @@ const Nav = () => {
 
     const Logo = () => {
         return (
-            <a href="#" className="logo">
+            <a href="#" className="logoContainer">
                 <div className="logo">
                     <FontAwesomeIcon icon={faPiedPiperSquare} size="4x" />
                     <div className="companyName">

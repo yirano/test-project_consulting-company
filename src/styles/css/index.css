@@ -200,6 +200,16 @@ img {
     width: 100%;
     transition: padding 200ms linear;
     z-index: 999; }
+    @media screen and (min-width: 999px) {
+      .header .nav {
+        position: absolute;
+        background: transparent;
+        flex-direction: row;
+        padding: 2.7rem 0rem 1.1rem;
+        margin: 0 6rem;
+        animation: none;
+        border-bottom: 1px solid #fff;
+        width: stretch; } }
     .header .nav .logoMenuIcon {
       display: flex;
       flex-direction: row;
@@ -207,28 +217,42 @@ img {
       justify-content: space-between;
       width: 100%;
       padding: 0 3rem; }
-      .header .nav .logoMenuIcon .logo {
-        display: flex;
-        align-items: center; }
-        .header .nav .logoMenuIcon .logo .companyName {
-          margin-left: 0.3rem;
-          padding: 1rem;
-          letter-spacing: 0.07rem;
-          font-weight: 300;
-          line-height: 1.4rem; }
-          .header .nav .logoMenuIcon .logo .companyName p {
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 0.16rem; }
+      @media screen and (min-width: 999px) {
+        .header .nav .logoMenuIcon {
+          width: 25%;
+          padding: 0; }
+          .header .nav .logoMenuIcon .menuIcon {
+            display: none; } }
+      .header .nav .logoMenuIcon .logoContainer {
+        text-decoration: none;
+        padding: 0;
+        min-width: 17rem; }
+        .header .nav .logoMenuIcon .logoContainer .logo {
+          display: flex;
+          align-items: center; }
+          .header .nav .logoMenuIcon .logoContainer .logo .companyName {
+            margin-left: 0.3rem;
+            padding: 1rem;
+            letter-spacing: 0.07rem;
+            font-weight: 300;
+            line-height: 1.4rem; }
+            .header .nav .logoMenuIcon .logoContainer .logo .companyName p {
+              text-transform: uppercase;
+              font-size: 0.8rem;
+              letter-spacing: 0.16rem; }
     .header .nav .menu {
       display: flex;
-      flex-grow: 2;
       flex-direction: column;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: flex-end;
       text-align: center;
       animation: showMenu 300ms forwards;
       overflow: hidden; }
+      @media screen and (min-width: 999px) {
+        .header .nav .menu {
+          flex-direction: row;
+          animation: none 300ms linear; } }
       .header .nav .menu .menuLinks {
         display: flex;
         flex-direction: column;
@@ -236,6 +260,11 @@ img {
         .header .nav .menu .menuLinks a {
           text-transform: uppercase;
           text-decoration: none; }
+        @media screen and (min-width: 999px) {
+          .header .nav .menu .menuLinks {
+            flex-direction: row; }
+            .header .nav .menu .menuLinks li {
+              padding: 1rem; } }
       .header .nav .menu .menuActions {
         display: flex;
         flex-direction: column;
@@ -259,35 +288,14 @@ img {
           .header .nav .menu .menuActions button:hover {
             background: #1793d4;
             color: #fff; }
+        @media screen and (min-width: 999px) {
+          .header .nav .menu .menuActions {
+            flex-direction: row; } }
         .header .nav .menu .menuActions .search {
           margin: 1.3rem; }
       .header .nav .menu.hideMenu {
         overflow: hidden;
         animation: hideMenu 300ms forwards; }
-    @media screen and (min-width: 999px) {
-      .header .nav {
-        position: absolute;
-        background: transparent;
-        flex-direction: row;
-        padding: 2.7rem 0rem 1.1rem;
-        margin: 0 6rem;
-        animation: none;
-        border-bottom: 1px solid #fff;
-        width: stretch; }
-        .header .nav .logoMenuIcon {
-          width: 25%;
-          padding: 0; }
-          .header .nav .logoMenuIcon .menuIcon {
-            display: none; }
-        .header .nav .menu {
-          flex-direction: row;
-          animation: none 300ms linear; }
-          .header .nav .menu .menuLinks {
-            flex-direction: row; }
-            .header .nav .menu .menuLinks li {
-              padding: 1rem; }
-          .header .nav .menu .menuActions {
-            flex-direction: row; } }
   .header .cta {
     display: flex;
     flex-direction: column;
@@ -362,7 +370,7 @@ img {
         height: 74px;
         flex-direction: row;
         justify-content: flex-start; } }
-    @media (min-width: 992px) {
+    @media (min-width: 999px) {
       .header .subMenu {
         padding-left: 9.55%; } }
     .header .subMenu .subMenuPrompt {
