@@ -307,6 +307,7 @@ img {
     text-align: center;
     height: 100%;
     width: 100%;
+    line-height: 4.4rem;
     font-weight: 300;
     letter-spacing: 0.2rem; }
     @media screen and (min-width: 999px) {
