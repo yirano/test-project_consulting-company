@@ -429,22 +429,19 @@ img {
       height: 13rem;
       overflow: hidden; }
     .mainContent .card .cardDesc {
-      padding: 1.6rem;
+      padding: 1.8rem 1.3rem 0.7rem;
       height: 59%; }
       .mainContent .card .cardDesc h4 {
-        display: inline-block;
+        display: inline;
         color: #1793d4;
         text-transform: uppercase;
-        font-weight: 300;
-        padding-bottom: 1.7rem;
-        margin-right: 0.35rem; }
-        .mainContent .card .cardDesc h4 span {
-          font-weight: 700; }
+        font-weight: 300; }
         .mainContent .card .cardDesc h4:last-of-type {
           font-weight: 700; }
       .mainContent .card .cardDesc p {
         font-size: 0.9rem;
-        line-height: 1.4rem; }
+        line-height: 1.5rem;
+        padding: 1.4rem 0; }
     .mainContent .card .cardButton {
       position: absolute;
       bottom: -1.25rem; }

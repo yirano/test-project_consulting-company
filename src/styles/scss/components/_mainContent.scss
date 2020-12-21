@@ -22,25 +22,21 @@
 			overflow: hidden;
 		}
 		.cardDesc {
-			padding: 1.6rem;
+			padding: 1.8rem 1.3rem 0.7rem;
 			height: 59%;
 			h4 {
-				display: inline-block;
+				display: inline;
 				color: $blue;
 				text-transform: uppercase;
 				font-weight: 300;
-				padding-bottom: 1.7rem;
-				margin-right: 0.35rem;
-				span {
-					font-weight: 700;
-				}
 				&:last-of-type {
 					font-weight: 700;
 				}
 			}
 			p {
 				font-size: 0.9rem;
-				line-height: 1.4rem;
+				line-height: 1.5rem;
+				padding: 1.4rem 0;
 			}
 		}
 		.cardButton {

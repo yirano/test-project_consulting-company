@@ -9,7 +9,6 @@ const Card = (props) => {
                 <img src={data.image} />
             </div>
             <div className="cardDesc">
-
                 {cardTitle.map(title => <h4>{title}</h4>)}
                 <p>{data.content}</p>
             </div>
