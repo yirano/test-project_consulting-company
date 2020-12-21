@@ -230,6 +230,7 @@
 		.subMenuLinks {
 			display: flex;
 			text-align: center;
+			padding: 0 1rem;
 			a {
 				padding: 0.1;
 				font-size: 0.9rem;
@@ -238,7 +239,6 @@
 				flex-direction: row;
 				a {
 					padding: 1rem;
-					font-size: 0.9rem;
 				}
 			}
 		}

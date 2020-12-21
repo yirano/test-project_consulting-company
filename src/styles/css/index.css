@@ -395,7 +395,8 @@ img {
             margin-left: 1.7rem; } }
     .header .subMenu .subMenuLinks {
       display: flex;
-      text-align: center; }
+      text-align: center;
+      padding: 0 1rem; }
       .header .subMenu .subMenuLinks a {
         padding: 0.1;
         font-size: 0.9rem; }
@@ -403,8 +404,7 @@ img {
         .header .subMenu .subMenuLinks {
           flex-direction: row; }
           .header .subMenu .subMenuLinks a {
-            padding: 1rem;
-            font-size: 0.9rem; } }
+            padding: 1rem; } }
 
 .mainContent {
   display: flex;

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPiedPiperSquare } from '@fortawesome/free-brands-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-const Nav = () => {
+const Nav = (props) => {
     const [showMenu, setShowMenu] = useState(false)
 
     useEffect(() => {
@@ -43,11 +43,9 @@ const Nav = () => {
 
             <div className={showMenu ? "menu " : "menu hideMenu"}>
                 <div className="menuLinks">
-                    <a href="#">Expertise</a>
-                    <a href="#">Events</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Connect</a>
-                    <a href="#">Customer Stories</a>
+                    {props.menu.map(menuItem => {
+                        return <a href={menuItem.url}>{menuItem.text}</a>
+                    })}
                 </div>
                 <div className="menuActions">
                     <button>Let's Talk</button>

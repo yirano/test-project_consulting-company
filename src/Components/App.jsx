@@ -4,6 +4,10 @@ import MainContent from "./MainContent/MainContent"
 import Footer from "./Footer/Footer"
 
 const App = () => {
+
+
+
+
 	return (
 		<div className="app">
 			<Header />
