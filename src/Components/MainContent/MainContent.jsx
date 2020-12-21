@@ -11,13 +11,9 @@ const MainContent = () => {
             }).catch(err => console.dir(err))
     }, [])
 
-    console.log('mainContent', mainData)
     return (
         <div className="mainContent">
             {mainData.map(item => <Card data={item} />)}
-            {/* <Card />
-            <Card />
-            <Card /> */}
         </div>
     )
 }

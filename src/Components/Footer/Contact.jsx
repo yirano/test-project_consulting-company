@@ -1,34 +1,43 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Facebook from '../../Assets/images/facebook.svg'
 import Twitter from '../../Assets/images/twitter.svg'
 import YouTube from '../../Assets/images/youtube.svg'
 
-const Contact = () => {
+const Contact = (props) => {
+    const [contact, setContact] = useState(props.contact)
+    const addr = contact.address.replace(/\,/, ',*').split('*')
+
+    // * I'm having a bit of trouble trying to use the imported images from my assets folder because the data was being sent back as a String. I'm restructuring that String into a Component here.
+    useEffect(() => {
+        setContact({
+            ...props.contact,
+            social_media: [
+                { ...props.contact.social_media.url, icon: Facebook },
+                { ...props.contact.social_media.url, icon: Twitter },
+                { ...props.contact.social_media.url, icon: YouTube }
+            ]
+        })
+    }, [])
+
     return (
         <div className="contact">
             <div className="phoneEmail">
-                <h1>555.555.5555</h1>
-                <p>Or send us an email using our <a href="#">contact form</a>.</p>
+                <h1>{contact.phone}</h1>
+                <p>{contact.contact_form.text} <a href={contact.contact_form.url}>{contact.contact_form.link_text}</a>.</p>
             </div>
             <div className="spacer" />
             <div className="addressSocial">
                 <address>
                     <div>
-                        <h4>
-                            1234 Address,
-                        </h4>
-                        <h4>
-                            Springfield, MO 65806
-                        </h4>
+                        {addr.map(addr => <h4>{addr}</h4>)}
                     </div>
                     <p>
-                        <a href="#">Get directions</a> to our office.
+                        <a href={contact.directions.url}>{contact.directions.link_text}</a> {contact.directions.text}
                     </p>
                 </address>
                 <div className="socialMedia">
-                    <img src={Facebook} />
-                    <img src={Twitter} />
-                    <img src={YouTube} />
+                    {contact.social_media.map(link => <a href={link.url}><img src={link.icon} /></a>
+                    )}
                 </div>
             </div>
         </div>

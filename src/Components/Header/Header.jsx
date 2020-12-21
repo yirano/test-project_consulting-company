@@ -43,8 +43,6 @@ const Header = () => {
             }).catch(err => console.dir(err))
     }, [])
 
-    console.log(headerData)
-
     return (
         <div className="header">
             <Nav menu={headerData.menu} brand={headerData.brand} navButton={headerData.nav_button} />
