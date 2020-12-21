@@ -47,7 +47,7 @@ const Header = () => {
 
     return (
         <div className="header">
-            <Nav menu={headerData.menu} />
+            <Nav menu={headerData.menu} brand={headerData.brand} navButton={headerData.nav_button} />
             <CallToAction />
             <SubMenu />
         </div>

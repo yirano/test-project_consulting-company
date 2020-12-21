@@ -4,6 +4,7 @@ import { faPiedPiperSquare } from '@fortawesome/free-brands-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const Nav = (props) => {
+    const { menu, brand, navButton } = props
     const [showMenu, setShowMenu] = useState(false)
 
     useEffect(() => {
@@ -26,8 +27,8 @@ const Nav = (props) => {
                 <div className="logo">
                     <FontAwesomeIcon icon={faPiedPiperSquare} size="4x" />
                     <div className="companyName">
-                        <h4>Pretend Company</h4>
-                        <p>Consulting Group</p>
+                        <h4>{brand.company_name}</h4>
+                        <p>{brand.secondary}</p>
                     </div>
                 </div>
             </a>
@@ -43,12 +44,14 @@ const Nav = (props) => {
 
             <div className={showMenu ? "menu " : "menu hideMenu"}>
                 <div className="menuLinks">
-                    {props.menu.map(menuItem => {
+                    {menu.map(menuItem => {
                         return <a href={menuItem.url}>{menuItem.text}</a>
                     })}
                 </div>
                 <div className="menuActions">
-                    <button>Let's Talk</button>
+                    <a href={navButton.url}>
+                        <button>{navButton.text}</button>
+                    </a>
                     <div className="search">
                         <FontAwesomeIcon icon={faSearch} size="lg" />
                     </div>
