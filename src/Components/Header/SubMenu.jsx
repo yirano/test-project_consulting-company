@@ -2,17 +2,17 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 
-const SubMenu = () => {
+const SubMenu = (props) => {
+    const { subMenu } = props
     return (
         <div className="subMenu">
             <div className="subMenuPrompt">
                 <FontAwesomeIcon icon={faUserCircle} size="3x" />
-                <p>How can we help?</p>
+                <p>{subMenu.question}</p>
             </div>
             <div className="subMenuLinks">
-                <a href="#">I own a business.</a>
-                <a href="#">I manage or work on a team.</a>
-                <a href="#">I'm here to learn.</a>
+                {subMenu.links.map(menuItem => <a href={menuItem.url}>{menuItem.text}</a>)}
+
             </div>
         </div>
     )

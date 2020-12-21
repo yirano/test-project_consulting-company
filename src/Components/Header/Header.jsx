@@ -49,7 +49,7 @@ const Header = () => {
         <div className="header">
             <Nav menu={headerData.menu} brand={headerData.brand} navButton={headerData.nav_button} />
             <CallToAction cta={headerData.cta} />
-            <SubMenu />
+            <SubMenu subMenu={headerData.sub_menu} />
         </div>
     )
 }
