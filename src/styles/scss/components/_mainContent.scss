@@ -25,11 +25,16 @@
 			padding: 1.6rem;
 			height: 59%;
 			h4 {
+				display: inline-block;
 				color: $blue;
 				text-transform: uppercase;
 				font-weight: 300;
 				padding-bottom: 1.7rem;
+				margin-right: 0.35rem;
 				span {
+					font-weight: 700;
+				}
+				&:last-of-type {
 					font-weight: 700;
 				}
 			}
@@ -42,7 +47,7 @@
 			position: absolute;
 			bottom: -1.25rem;
 			button {
-				@include buttons($background: $orange, $height: 3.1 );
+				@include buttons( $width: 19 ,$background: $orange, $height: 3.1);
 				@include borders($border: none);
 				&:hover {
 					@include hover($background: $white, $color: $orange);

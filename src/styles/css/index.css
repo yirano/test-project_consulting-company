@@ -432,11 +432,15 @@ img {
       padding: 1.6rem;
       height: 59%; }
       .mainContent .card .cardDesc h4 {
+        display: inline-block;
         color: #1793d4;
         text-transform: uppercase;
         font-weight: 300;
-        padding-bottom: 1.7rem; }
+        padding-bottom: 1.7rem;
+        margin-right: 0.35rem; }
         .mainContent .card .cardDesc h4 span {
+          font-weight: 700; }
+        .mainContent .card .cardDesc h4:last-of-type {
           font-weight: 700; }
       .mainContent .card .cardDesc p {
         font-size: 0.9rem;
@@ -445,7 +449,7 @@ img {
       position: absolute;
       bottom: -1.25rem; }
       .mainContent .card .cardButton button {
-        width: 9rem;
+        width: 19rem;
         height: 3.1rem;
         color: #fff;
         background: #fca656;

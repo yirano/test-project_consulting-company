@@ -1,20 +1,22 @@
 import React from 'react'
-import Image from '../../Assets/images/discussing.jpeg'
 
-const Card = () => {
+const Card = (props) => {
+    const { data } = props
+    const cardTitle = data.title.split(/(?<=\ )/)
     return (
         <div className="card">
             <div className="cardImage">
-                <img src={Image} />
+                <img src={data.image} />
             </div>
             <div className="cardDesc">
 
-                {/* ! This needs to work dynamically w/o hard-coded <span/> */}
-                <h4>See our <span>Expertise</span></h4>
-                <p>Lorem ipsum imperdiet rhoncus at lecturs In felis lobortis volupat auctor quam. In lecturs. Ut tincidunt pharetra nibh. Urna vitae. Ipsum mi. Vitae. Consectetur augue nec nisi a Quisque urna ac, elit. Amet fementum pharetra</p>
+                {cardTitle.map(title => <h4>{title}</h4>)}
+                <p>{data.content}</p>
             </div>
             <div className="cardButton">
-                <button>Click</button>
+                <a href={data.button.url}>
+                    <button>{data.button.text}</button>
+                </a>
             </div>
         </div>
     )
