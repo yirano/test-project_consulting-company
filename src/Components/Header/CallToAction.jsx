@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
-const CallToAction = () => {
+const CallToAction = (props) => {
+    const { cta } = props
+    const msg = cta.message.split(/(?<=\,)/)
+
     return (
         <div className="cta">
             <div className="ctaMessage">
-                <h1>Creating Clear Direction,</h1>
-                <h1>Intuitive Processes,</h1>
-                <h1>And Engaged Teams.</h1>
+                {msg.map(m => <h1>{m}</h1>)}
             </div>
             <div className="ctaLinks">
-                <button>Get to know us</button>
-                <p>Ready to get started? <a href="#">Contact us today.</a></p>
+                <a href={cta.button.url}>
+                    <button>{cta.button.text}</button>
+                </a>
+                <p>{cta.second.text} <a href={cta.third.url}>{cta.third.text}</a></p>
             </div>
         </div>
     )
